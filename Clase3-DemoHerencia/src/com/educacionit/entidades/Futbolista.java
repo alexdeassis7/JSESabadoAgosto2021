@@ -1,6 +1,7 @@
 package com.educacionit.entidades;
 
 //clase hija de SeleccionFutbol
+//con las interfaces podemos simular un "seudo herencia multiple" implementando mas de una interface 
 public class Futbolista extends SeleccionFutbol {
 
 	private int dorsal;
@@ -46,7 +47,7 @@ public class Futbolista extends SeleccionFutbol {
 
 	@Override
 	public void entrenamiento() {
-		System.out.println("REaliza un Entrenamiento (Clase Futbolista)");
+		System.out.println("Realiza un Entrenamiento (Clase Futbolista)");
 	}
 	
 	//especializacion : sobreescribo un metodo de la clase padre
@@ -55,6 +56,7 @@ public class Futbolista extends SeleccionFutbol {
 		System.out.println("Juega un partido  (Clase Futbolista)");
 	}
 
+	//metodo propio de la clase hija
 	public void entrevista() {
 		System.out.println("Da un Entrevista (Clase Futbolista)");
 	}

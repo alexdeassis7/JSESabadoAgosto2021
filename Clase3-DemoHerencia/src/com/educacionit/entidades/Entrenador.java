@@ -41,8 +41,20 @@ public class Entrenador extends SeleccionFutbol {
 		System.out.println("Dirige un partido de Futbol -  (Clase Entrenador) ");
 	}
 
+	//metodo propio de la clase hija 
 	public void planificarEntrenamiento() {
 		System.out.println("Planifica un Entrenamiento -  (Clase Entrenador) ");
+	}
+
+	@Override
+	public void entrenar() {
+		System.out.println("dirige el entrenamiento (Clase Entrenador) ");
+		
+	}
+
+	@Override
+	public void jugarPartido() {
+				System.out.println("dirige un Partido (Clase Entrenador )");
 	}
 
 }

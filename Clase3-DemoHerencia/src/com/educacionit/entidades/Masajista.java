@@ -1,15 +1,18 @@
 package com.educacionit.entidades;
 
+import com.educacionit.interfaces.IconstantesMensajesError;
+
 //clase hija de SeleccionFutbol
 //no se permite la herencia multiple 
 //extends : indica cual es la clase padre 
-public class Masajista extends SeleccionFutbol {
+public class Masajista extends SeleccionFutbol implements IconstantesMensajesError{
+
 
 	private String titulacion;
 	private int aniosExperiencia;
 
 	// metodo propio de la clase hija
-	public void darMasaje() {
+	public void darMasaje() {		
 		System.out.println("darMasaje() - (Clase Hija - Masajista) ");
 	}
 
@@ -42,7 +45,19 @@ public class Masajista extends SeleccionFutbol {
 	// sobreescribimos metodos de la clase padre
 	@Override
 	public void entrenamiento() {
-		System.out.println("DA asistencia en el entrenamiento (CLase Masajista)");
+		System.out.println("DA asistencia en el entrenamiento (Clase Masajista)");
+	}
+
+	@Override
+	public void entrenar() {
+	System.out.println("Da Asistencia en el entrenamiento  (Clase Masajista)");
+		
+	}
+
+	@Override
+	public void jugarPartido() {
+		System.out.println("(Clase Masajista)");
+		
 	}
 
 }

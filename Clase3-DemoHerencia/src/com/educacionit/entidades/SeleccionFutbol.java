@@ -1,7 +1,9 @@
 package com.educacionit.entidades;
 
+import com.educacionit.interfaces.IntegranteSeleccionFutbol;
+
 //clase padre Abstract : solo la utilizamos para realizar mecanismos de herencia , NO SE PODRA crear objetos de esta clase NUNCA en la app
-public abstract class SeleccionFutbol {
+public abstract class SeleccionFutbol implements IntegranteSeleccionFutbol{
 	
 	// atributos comunes a todas las clases
 	
