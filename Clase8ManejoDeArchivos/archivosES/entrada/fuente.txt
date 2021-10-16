@@ -1,0 +1,4 @@
+BufferedWriter :
+
+Escribe texto de un flujo de entrada de caracteres, almacenando caracteres en búfer para proporcionar una escritura eficiente
+de caracteres
