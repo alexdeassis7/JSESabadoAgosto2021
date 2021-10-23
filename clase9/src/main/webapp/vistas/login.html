@@ -1,25 +1,80 @@
+
+
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+<!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
 <!DOCTYPE html>
-<!-- documetno html -->
 <html>
-<!-- cabecera de la pagina  -->
 <head>
 <meta charset="ISO-8859-1">
-<title>Login</title>
+<title>Login Page</title>
+
+<!-- Libreria Bootstrap 4 -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Estilos Customizados -->
+<link rel="stylesheet" type="text/css"  href="../estilos/estilo.css">
+<!-- FontaWesome CDN -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
 </head>
-<!-- cuerpo de la pagina  -->
 <body>
 
-<!-- formulario con post -->
-<!-- invocamos al servletController con "action" -->
-	<form action="../init.do" method="post"> 
-<!-- 	  entradas del formulario  -->
-		Id Name : <input type="text" name="uname">
-		
-		Password : <input type="password" name="pass">
-		
-		 <input type="submit" value="submit">
-		
-	</form>
-
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Sing In</h3>
+				<div class="d-flex justify-content-end social_icon">
+					<span><i class="fab fa-facebook-square"></i></span>
+					<span><i class="fab fa-google-plus-square"></i></span>
+					<span><i class="fab fa-twitter-square"></i></span>
+				</div>
+			</div>
+			
+			<div class="card-body">
+				<form action="../init.do" method="post">
+					
+					<!-- input de nombre de usuario -->
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" class="form-control" name="uname" placeholder="ingrese su nombre de usuario">
+					</div>
+					
+					<!-- input de nombre de clave de usuario -->
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" class="form-control" name="pass" placeholder="ingrese su nombre clave de acceso">
+					</div>
+					
+					<!-- checkbox de recordar credenciales  -->
+					<div class="row align-items-center remember">
+						<input type="checkbox"> Remenber Me
+					</div>
+					
+					<!-- boton de envio de datos  -->
+					<div class="form-group">
+						<input type="submit" value="Login" class="btn float-rigth login_btn">
+					</div>			
+					
+				</form>		
+			</div>
+			<div class="card-footer">
+				<div class="d-flex justify-content-center links">
+					Dont'n have an account? <a href="#">Sing Up</a>
+				</div>
+				<div class="d-flex justify-content-center ">
+					 <a href="#">Forgot your password?</a>
+				</div>	
+			</div>
+			
+		</div>
+	</div>
+</div>
 </body>
 </html>

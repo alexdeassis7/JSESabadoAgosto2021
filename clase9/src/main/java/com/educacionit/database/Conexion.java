@@ -25,7 +25,7 @@ public class Conexion {
 			if (conn != null) {
 				System.out.println("Se logro conectar exitosamente a la base " + db);
 			}
-			
+
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		} catch (ClassNotFoundException e) {
@@ -35,8 +35,23 @@ public class Conexion {
 		}
 
 	}
-	
-	
+
+	public Connection getConnection() {
+		return conn;
+	}
+
+	public void desconectar() {
+
+		try {
+			conn.close();
+			conn = null;
+			System.out.println("Se logro desconectar de la base de datos de " + db);
+		} catch (SQLException e) {
+			System.out.println("no se logro cerrar la conexion a la base ");
+		}
+
+	}
+
 	public static void main(String[] args) {
 		Conexion connMysql = new Conexion();
 	}
